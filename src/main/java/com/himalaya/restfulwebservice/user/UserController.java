@@ -1,5 +1,6 @@
 package com.himalaya.restfulwebservice.user;
 
+import org.springframework.hateoas.EntityModel;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -29,6 +30,8 @@ public class UserController {
         if (user == null) {
             throw new UserNotFoundException(String.format("ID[%s] is not found", id));
         }
+
+        // HATEOAS
 
         return user;
     }
