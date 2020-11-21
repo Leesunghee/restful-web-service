@@ -8,3 +8,10 @@ logging:
 spring:
   messages:
     basename: messages
+
+#  actuator 실행 시 좀 더 많은 정보를 보기 위한 설정
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
